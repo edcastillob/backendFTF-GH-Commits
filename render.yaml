@@ -2,4 +2,4 @@ services:
   - name: backend
     type: web
     buildCommand: npm install && npm run build
-    startCommand: npm run start:prod
+    startCommand: npm run start
