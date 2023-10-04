@@ -21,9 +21,11 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);
 
-  const port = configService.get<number>('PORT');
+  const port = configService.get<number>('PORT') || 3000; // Usar el puerto configurado o 3000 por defecto
 
-  await app.listen(3000);
+  await app.listen(port);
   console.log(`⚡📱 Application running on port ${port} ...`);
 }
+
 bootstrap();
+
