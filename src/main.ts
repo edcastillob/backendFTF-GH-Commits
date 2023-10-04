@@ -23,7 +23,7 @@ async function bootstrap() {
 
   const port = configService.get<number>('PORT');
 
-  await app.listen(port);
+  await app.listen(3000);
   console.log(`⚡📱 Application running on port ${port} ...`);
 }
 bootstrap();
